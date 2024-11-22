@@ -1,0 +1,120 @@
+:root {
+    font-size: 16px;
+    --body-bg: #2c2c2c;
+    --body-fg:  #eeeeee;
+
+    --red: #f33434;
+    --prime: #58eb89;
+    --fg: #e2e2e2;
+    --box-bg: #222222;
+
+    --x-h: 3rem;
+
+    --shadow-x: 4px 4px 10px 0 #1111113b inset;
+    --glow: 0 0 10px 0 var(--prime);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+}
+
+body {
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--body-bg);
+    color: var(--body-fg);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: #0000001a;
+}
+
+#inputBox {
+    display: grid;
+    gap: 0.5rem;
+    width: 20rem;
+}
+
+
+h1, span, select, input {
+    color: var(--fg);
+}
+
+#output {
+    text-align: center;
+}
+
+.subBox {
+    height: var(--x-h);
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: var(--box-bg);
+}
+
+.subBox:hover {
+    box-shadow: var(--glow);
+}
+
+input {
+    width: 100%;
+    font-size: 1.5rem;
+    box-shadow: var(--shadow-x)
+}
+
+input:focus {
+    outline: 2px solid var(--prime);
+}
+
+select {
+    font-size: 1rem;
+}
+
+select:focus {
+    outline: 2px solid var(--prime);
+}
+
+option {
+    background-color: var(--box-bg);
+    color: var(--prime);
+}
+
+#resultBox {
+    display: flex;
+    gap: 1rem;
+}
+
+#clear {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#clear img:hover{
+    filter: drop-shadow(0 0 1rem var(--prime));
+}
+
+#info {
+    position: absolute;
+    left: 20rem;
+    top: 1rem;
+    color: var(--prime);
+    cursor: pointer;
+}
+
+#info:hover {
+    text-shadow: 0 0 8px var(--prime);
+}   
